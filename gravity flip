@@ -1,0 +1,18 @@
+n = int(input())
+arr = input().split()
+
+# convert to integers
+for i in range(n):
+    arr[i] = int(arr[i])
+
+# simple bubble sort
+for i in range(n):
+    for j in range(n - 1):
+        if arr[j] > arr[j + 1]:
+            temp = arr[j]
+            arr[j] = arr[j + 1]
+            arr[j + 1] = temp
+
+# print result
+for i in range(n):
+    print(arr[i], end=" ")
